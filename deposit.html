@@ -146,11 +146,11 @@
                             <i class="fa-solid fa-user"></i> My Profile
                         </div>
 
-                        <div class="side-nav-item">
+                        <div class="side-nav-item ">
                             <i class="fa-solid fa-money-bill-transfer"></i> Transaction
                         </div>
 
-                        <div class="side-nav-item">
+                        <div class="side-nav-item active">
                             <i class="fa-solid fa-money-bill-wheat"></i>Deposit
                         </div>
 
@@ -162,7 +162,7 @@
                             <i class="fa-solid fa-store"></i> My Shop
                         </div>
 
-                        <div class="side-nav-item active">
+                        <div class="side-nav-item">
                             <i class="fa-solid fa-shield-halved"></i> Security
                         </div>
                     </div>
@@ -176,100 +176,127 @@
             </div>
 
             <div class="col-lg-9">
-                <div class="primary-block primary-block-l">
+                <div class="primary-block">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form class="primary-form">
 
-                    <ul class="nav nav-pills mb-3 primary-tab" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
-                                role="tab" aria-controls="pills-home" aria-selected="true">
-                                Reset Password
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
-                                role="tab" aria-controls="pills-profile" aria-selected="false">
-                                Set Security Password
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                            aria-labelledby="pills-home-tab">
-                            <div class="wrapper-form centering">
-                                <form class="">
-                                    <div class="profile-form form-group d-flex align-items-center">
-                                        <div class="form-label">
-                                            Password
-                                        </div>
-                                        <input value="*******" type="password" class="form-control primary-input"
-                                            id="exampleInputPassword1" placeholder="Password">
+                                <div class="form-group">
+                                    <div class="form-label">
+                                        Deposit with currency
                                     </div>
-
-                                    <div class="profile-form form-group d-flex align-items-center">
-                                        <div class="form-label">
-                                            Password confirm
-                                        </div>
-                                        <input value="*******" type="password" class="form-control primary-input"
-                                            id="exampleInputPassword1" placeholder="Password confirm">
+                                    <div class="select-wrapper">
+                                        <select name="cars" id="cars">
+                                            <option value="volvo">USDT</option>
+                                            <option value="saab">COIN</option>
+                                        </select>
                                     </div>
+                                </div>
 
-                                    <div class="profile-form form-group d-flex align-items-center">
-                                        <div class="form-label">
-                                            Verify code
-                                        </div>
-                                        <input value="CACONFUTURE" type="text" class="form-control primary-input"
-                                            id="exampleInputPassword1" placeholder="Verify code">
+                                <div class="form-group">
+                                    <div class="form-label">
+                                        Blockchain network
                                     </div>
+                                    <div class="select-wrapper">
+                                        <select name="cars" id="cars">
+                                            <option value="volvo">TRON</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                                    <div class="d-flex justify-content-end">
-                                        <button type="submit" class="primary-blue-button profile-button">Update</button>
+                                <div class="form-group">
+                                    <div class="form-label">
+                                        Amount
                                     </div>
-                                </form>
-                            </div>
+                                    <input type="number" class="form-control primary-input" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="$100">
+                                </div>
+
+                                <button type="submit" class="primary-blue-button w-100 mt-3">Deposit</button>
+                            </form>
                         </div>
 
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
-                            aria-labelledby="pills-profile-tab">
-                            <div class="wrapper-form centering">
-                                <form class="">
+                        <div class="col-lg-6">
+                            <div class="primary-form">
+                                <div class="deposit-title text-center">
+                                    COIN wil be deposited immeddiately
+                                    <br>
+                                    after 1 network confimation
+                                </div>
 
-                                    <div class="profile-form form-group d-flex align-items-center">
-                                        <div class="form-label">
-                                            Password
-                                        </div>
-                                        <input value="*******" type="password" class="form-control primary-input"
-                                            id="exampleInputPassword1" placeholder="Password">
-                                    </div>
+                                <div class="centering">
+                                    <img class="deposit-qr" src="./assets/img/qr.png" alt="">
+                                </div>
 
-                                    <div class="profile-form form-group d-flex align-items-center">
-                                        <div class="form-label">
-                                            Set Security Password
-                                        </div>
-                                        <input value="*******" type="password" class="form-control primary-input"
-                                            id="exampleInputPassword1" placeholder="Set Security Password">
-                                    </div>
+                                <div class="deposit-desc text-center">
+                                    Please send <span class="value">198 COIN</span> to this address:
+                                    <br>
 
-                                    <div class="profile-form form-group d-flex align-items-center">
-                                        <div class="form-label">
-                                            Set Security Password Confirm
-                                        </div>
-                                        <input value="*******" type="password" class="form-control primary-input"
-                                            id="exampleInputPassword1" placeholder="Set Security Password  Confirm">
-                                    </div>
+                                    <span class="value">
+                                        abndy157964894hfjg3469852hrg
+                                    </span>
 
-                                    <div class="d-flex justify-content-end">
-                                        <button type="submit" class="primary-blue-button profile-button">Update</button>
-                                    </div>
-                                </form>
+                                    <br>
+
+                                    Fund transfer processing
+                                    <br>
+
+                                    <span class="red-text">
+                                        Cancel
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
+
+                    <div class="transaction">
+                        <div class="transaction-table">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Code</th>
+                                        <th>Currency</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Hash</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            2022-08-01
+                                            <br>
+                                            04:56
+                                        </td>
+                                        <td>
+                                            D65892435
+                                        </td>
+                                        <td>
+                                            COIN
+                                        </td>
+                                        <td class="transaction-status transaction-status--Complete">
+                                            20.00 COIN
+                                        </td>
+                                        <td class="transaction-status transaction-status--Complete">
+                                            Completed
+                                        </td>
+                                        <td>
+                                            hash
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="transaction-pagination">
+                            <div class="transaction-pagination-item active">
+                                1
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 

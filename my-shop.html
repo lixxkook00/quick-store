@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/fontawesome-6.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!-- BTLOL -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- FONT HEHE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header hidden-m-t ">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <a href="/" class="header-logo">
+                    <img src="./assets/img/logo.png" alt="">
+                </a>
+
+                <div class="header-search">
+                    <input type="text" placeholder="Iphone 14 Pro Max...">
+                    <div class="header-search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+
+                <div class="header-infor d-flex align-items-center">
+                    <div class="language">
+                        English
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Cart
+                    </div>
+
+                    <div class="wallet">
+                        <i class="fa-solid fa-wallet"></i>
+                        $ 1,680,000.00
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="nav">
+            <div class="container">
+                <div class="header-nav">
+                    <div class="header-nav-item active">
+                        <i class="fa-solid fa-bars"></i>Categories
+                    </div>
+
+                    <div class="header-nav-item">
+                        <i class="fa-solid fa-money-bill-wheat"></i>Deposit
+                    </div>
+
+                    <div class="header-nav-item">
+                        <i class="fa-solid fa-money-bill-transfer"></i>Transaction
+                    </div>
+
+                    <div class="header-nav-item">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>With draw
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION MOBILE-->
+    <nav class="navigation-tab hide-on-pc hidden-low-pc">
+        <div class="navigation-tab-item">
+            <span class="navigation-tab__icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+            <span class="navigation-tab__txt">Giỏ hàng</span>
+        </div>
+        <div class="navigation-tab-item">
+            <span class="navigation-tab__icon">
+                <i class="fa-solid fa-square-poll-horizontal"></i>
+            </span>
+            <span class="navigation-tab__txt">Kết quả</span>
+        </div>
+        <div class="navigation-tab-item active">
+            <span class="navigation-tab__icon">
+                <img src="./assets/img/uniluckyfav.png" alt="">
+            </span>
+            <span class="navigation-tab__txt">Trang chủ</span>
+        </div>
+        <div class="navigation-tab-item">
+            <span class="navigation-tab__icon">
+                <i class="fa-solid fa-wallet"></i>
+            </span>
+            <span class="navigation-tab__txt">Quản lí TK</span>
+        </div>
+        <div class="navigation-tab-item">
+            <span class="navigation-tab__icon">
+                <i class="fa-solid fa-user"></i>
+            </span>
+            <span class="navigation-tab__txt">Tài khoản</span>
+        </div>
+        <div class="navigation-tab-overlay"></div>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="main-content container">
+        <div class="row">
+
+            <div class="col-lg-3">
+                <div class="side primary-block">
+                    <div class="side-infor d-flex align-items-center justify-content-center flex-column">
+                        <img class="avt"
+                            src="https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-1/283962131_102332829166972_3991285977109227663_n.jpg?stp=c81.0.200.200a_dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=pGtvaMsduRoAX_6bEhh&_nc_ht=scontent.fsgn2-7.fna&oh=00_AT-w93_lv5MvpMRUERZdBJvqhK6uo5N4ABQ34tBBcAQTGw&oe=63323459"
+                            alt="">
+
+                        <div class="side-name">
+                            The Best Designer Ever <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                    <div class="side-nav">
+                        <div class="side-nav-item">
+                            <i class="fa-solid fa-user"></i> My Profile
+                        </div>
+
+                        <div class="side-nav-item">
+                            <i class="fa-solid fa-money-bill-transfer"></i> Transaction
+                        </div>
+
+                        <div class="side-nav-item">
+                            <i class="fa-solid fa-money-bill-wheat"></i>Deposit
+                        </div>
+
+                        <div class="side-nav-item">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>With draw
+                        </div>
+
+                        <div class="side-nav-item active">
+                            <i class="fa-solid fa-store"></i> My Shop
+                        </div>
+
+                        <div class="side-nav-item">
+                            <i class="fa-solid fa-shield-halved"></i> Security
+                        </div>
+                    </div>
+
+                    <div class="log-out">
+                        <div class="side-nav-item">
+                            <i class="fa-solid fa-right-from-bracket"></i> Log out
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="primary-block primary-block-l">
+
+                    <ul class="nav nav-pills mb-3 primary-tab" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fa-solid fa-shop"></i>My product
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <i class="fa-solid fa-calendar-plus"></i>Add Shop
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-addshop-tab" data-toggle="pill" href="#pills-addshop"
+                                role="tab" aria-controls="pills-addshop" aria-selected="false">
+                                <i class="fa-solid fa-cart-plus"></i>Add product
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- my product -->
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+
+                            <div class="product-list">
+                                <div class="product">
+                                    <div class="product-img centering">
+                                        <img src="./assets/img/flashsale/product-2-10.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name">
+                                            Iphone 13 Pink
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="product-price">
+                                                US$111.99
+                                            </div>
+                                            <div class="product-quantity">
+                                                Quantity: 150
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product">
+                                    <div class="product-img centering">
+                                        <img src="./assets/img/flashsale/product-2-10.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name">
+                                            Iphone 13 Pink
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="product-price">
+                                                US$111.99
+                                            </div>
+                                            <div class="product-quantity">
+                                                Quantity: 150
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product">
+                                    <div class="product-img centering">
+                                        <img src="./assets/img/flashsale/product-2-10.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name">
+                                            Iphone 13 Pink
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="product-price">
+                                                US$111.99
+                                            </div>
+                                            <div class="product-quantity">
+                                                Quantity: 150
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product">
+                                    <div class="product-img centering">
+                                        <img src="./assets/img/flashsale/product-2-10.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name">
+                                            Iphone 13 Pink
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="product-price">
+                                                US$111.99
+                                            </div>
+                                            <div class="product-quantity">
+                                                Quantity: 150
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transaction-pagination">
+                                <div class="transaction-pagination-item active">
+                                    1
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- add shop -->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class=" ">
+                                <form class="">
+                                    <div class="centering mb-4">
+                                        <div class="profile-form-avt">
+                                            <img class="profile-form-avt-img"
+                                                src="https://thanhnien.mediacdn.vn/325084952045817856/2022/8/17/base64-1660728170674638030559.jpeg?689"
+                                                alt="">
+
+                                            <div class="profile-form-changeavt centering">
+                                                <i class="fa-solid fa-camera"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="profile-form form-group d-flex align-items-center">
+                                        <div class="form-label">
+                                            Name
+                                        </div>
+                                        <input type="text" class="form-control primary-input" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Name">
+                                    </div>
+
+                                    <div class="profile-form form-group d-flex align-items-center">
+                                        <div class="form-label">
+                                            Shop name
+                                        </div>
+                                        <input type="text" class="form-control primary-input" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Shop name">
+                                    </div>
+
+                                    <div class="profile-form form-group d-flex align-items-center">
+                                        <div class="form-label">
+                                            Email
+                                        </div>
+                                        <input type="email" class="form-control primary-input" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="E-Mail Address">
+                                    </div>
+
+                                    <div class="profile-form form-group d-flex align-items-center">
+                                        <div class="form-label">
+                                            Phone
+                                        </div>
+                                        <input type="text" class="form-control primary-input" id="exampleInputPassword1"
+                                            placeholder="Phone">
+                                    </div>
+
+                                    <div class="profile-form form-group d-flex align-items-center">
+                                        <div class="form-label">
+                                            Address
+                                        </div>
+                                        <input type="text" class="form-control primary-input" id="exampleInputPassword1"
+                                            placeholder="Address">
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="primary-blue-button profile-button">Create</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- add product -->
+                        <div class="tab-pane fade" id="pills-addshop" role="tabpanel"
+                            aria-labelledby="pills-addshop-tab">
+                            <form class="mt-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                Product name
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Product name">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                Price
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Price">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                Description
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Description">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                SKU
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="SKU">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                Quantity
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Quantity">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                Accessory
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Accessory">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                Price sale off
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Price sale off">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                Suite
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Suite">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                Free ship
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Free ship">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-label">
+                                                Weight
+                                            </div>
+                                            <input type="text" class="form-control primary-input"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                placeholder="Weight">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <input class="" type="file" id="img" name="img" accept="image/*">
+                                </div>
+
+                                <div class="d-flex justify-content-end mt-2">
+                                    <button type="submit" class="primary-blue-button profile-button">Create</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="./assets/js/clipboard.min.js"></script>
+<script src="./assets/css/bootstrap-5/js/bootstrap.min.js"></script>
+<script src="./assets/css/bootstrap-5/js/bootstrap.bundle.js"></script>
+<script src="./assets/css/bootstrap-5/js/poper.min.js"></script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/main.js"></script>

@@ -61,12 +61,43 @@ input[type=radio]{
     accent-color: var(--primaryColor);
 }
 
+select{
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    margin-bottom: 10px;
+    width: 100%;
+    border-color: #ddd;
+}
+
+select:focus-visible{
+    outline: #4AB848;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "⌄";
+  font-size: 1rem;
+  top: 6px;
+  right: 10px;
+  position: absolute;
+}
+
 ul{
     padding-left: 0;
 }
 
 input:focus{
-    outline: none;
+    outline: #4AB848;
+    border-color: #4AB848 !important;
 }
 
 .form-control:focus{
@@ -158,7 +189,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: #2D2D38;
+    background-color: #4AB848;
     padding: 8px 14px;
     
     color: #fff;
@@ -249,6 +280,7 @@ a:hover{
     padding: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 .primary-block-l{
@@ -283,17 +315,28 @@ a:hover{
     font-weight: 600;
 }
 
+.value{
+    font-weight: 600;
+    color: #00875a;
+}
+
+.red-text{
+    font-weight: 600;
+    color: red;
+}
+
 /* Form */
 
 .primary-form{
     padding: 30px 20px;
     border-radius: 20px;
+    border: 1px solid #ddd;
     background-color: rgba(255, 255, 255, 0.80);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.142);
 }
 
 .form-label{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     margin-left: 4px;
     margin-bottom: 2px;
@@ -317,13 +360,13 @@ a:hover{
     object-fit: cover;
     border-radius: 50%;
 
-    border: 1px solid #2D2D38;
+    border: 1px solid #4AB848;
 }
 
 /* MAIN */
 
 .main-content{
-    margin-top: 120px;
+    margin-top: 130px;
 }
 
 /* HEADER */
@@ -335,8 +378,8 @@ a:hover{
     left: 0;
     width: 100%;
     padding: 12px 0 0;
-    background-color: #2D2D38;
-    color: #fff;
+    background-color: #F1F1F1;
+    color: #2D2D38;
     overflow: hidden;
 }
 
@@ -348,7 +391,7 @@ a:hover{
 .header-nav{
     display: flex;
     align-items: center;
-    padding: 15px 20px 0;
+    padding: 10px 20px 0;
 }
 
 .header-nav-item{
@@ -356,20 +399,19 @@ a:hover{
     /* text-transform: uppercase; */
     font-weight: 600;
     transition: all 0.5s ease;
-
     padding: 8px 12px 8px;
     margin: 0 4px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-
     text-align: center;
     min-width: 140px;
     cursor: pointer;
+    color: #fff;
 }
 
 .header-nav-item:hover,
 .header-nav-item.active{
-    background-color: #4F4F5A;
+    background-color: #70856561;
 }
 
 .header-nav-item.active i,
@@ -433,13 +475,15 @@ a:hover{
 
 .cart{
     padding-right: 20px;
-    border-right: 0.5px solid #fff;
+    border-right: 0.5px solid #2D2D38;
 }
 
 .wallet{
     padding: 4px 10px;
     border-radius: 20px;
-    border: 1px solid #fff;
+    border: 1px solid #2D2D38;
+    color: #4AB848;
+    font-weight: 600;
 }
 
 /* HEADER MOBILE */
@@ -454,11 +498,13 @@ a:hover{
     flex: 1;
     margin-right: 10px;
     max-width: 700px;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
 }
 
 .header-search input{
     border: none;
     padding: 0 10px;
+    flex: 1;
 }
 
 .header-search i{
@@ -514,9 +560,8 @@ a:hover{
 .side-nav-item.active{
     cursor: pointer;
     transform: translateX(10px);
-
-    background-color: #2D2D38;
-    color: #f1b900;
+    background-color: #4AB848;
+    color: #fff;
 }
 
 .side-nav-item i{
@@ -528,7 +573,7 @@ a:hover{
 }
 
 .profile-form .form-label{
-    min-width: 170px;
+    min-width: 149px;
 }
 
 .profile-form-avt{
@@ -540,8 +585,7 @@ a:hover{
     width: 200px;
     object-fit: cover;
     border-radius: 50%;
-
-    border: 4px solid #2d2d38ca;
+    border: 4px solid #2D2D39;
 }
 
 .profile-form-changeavt{
@@ -552,9 +596,9 @@ a:hover{
     height: 30px;
     width: 30px;
     border: 1px solid #2D2D38;
-    background-color: #2d2d38ca;
+    background-color: #2D2D38;
     transition: all 0.2s linear;
-    color: #FFC916;
+    color: #4AB848;
 }
 
 .profile-form-changeavt:hover{
@@ -564,6 +608,7 @@ a:hover{
 
 .primary-tab{
     width: 100%;
+    background-color: transparent !important;
 }
 
 .primary-tab .nav-item{
@@ -581,16 +626,24 @@ a:hover{
     background-color: #F1F1F1;
     font-weight: 600;
     color: #949494;
+    transition: all 0.3s linear;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+.primary-tab .nav-item a:hover{
+    border-color: #00875a;
+    color: #00875a;
 }
 
 .primary-tab .nav-item a.active{
-    background-color: #2D2D38;
+    background-color: #4AB848;
     color: #fff;
 }
 
 .transaction-search{
     width: 100%;
-    border: 2px solid #2D2D38;
+    border: 2px solid #4AB848;
 }
 
 .transaction-search input{
@@ -602,12 +655,13 @@ table {
 }
 
 table tr {
-    height: 50px;
+    height: 35px;
     transition: all 0.3s linear;
 }
 
 table td, table th {
     text-align: center;
+    font-size: 14px;
 }
 
 .transaction-status {
@@ -624,14 +678,14 @@ table td, table th {
 }
 
 .transaction-table{
-    border: 2px solid #2D2D38;
+    border: 2px solid #4AB848;
     border-radius: 20px;
     margin-top: 20px;
     overflow: hidden;
 }
 
 .transaction-table tr:first-child{
-    border-bottom: 2px solid #2D2D38;
+    border-bottom: 2px solid #4AB848;
 }
 
 .transaction-table tr td:first-child{
@@ -644,7 +698,7 @@ table td, table th {
 
 .transaction-table tr:hover{
     cursor: pointer;
-    background-color: #2d2d3890;
+    background-color: #4AB84890;
     color: #fff;
 }
 
@@ -666,10 +720,88 @@ table td, table th {
 .transaction-pagination-item:hover,
 .transaction-pagination-item.active{
     cursor: pointer;
-    background-color: #2D2D38;
-    color: #F1B900;
+    background-color: #4AB848;
+    color: #fff;
 }
 
 .transaction-pagination-item:not(:last-child){
     margin-right: 10px;
+}
+
+.wrapper-form{
+    min-height: 300px;
+}
+
+.wrapper-form form{
+    width: 100%;
+    max-width: 600px;
+}
+
+.nav{
+    background-color: #4AB848;
+    margin-top: 15px;
+}
+
+.deposit-qr{
+    width: 200px;
+    margin: 10px 0;
+}
+
+.width-draw {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.width-draw .value{
+    font-size: 20px;
+}
+
+.nav-link i{
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.product{
+    border: 1px solid #eee;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.product-infor{
+    padding: 15px;
+}
+
+.product-img{
+    overflow: hidden;
+    height: 260px;
+}
+
+.product-img img{
+    object-fit: contain;
+}
+
+.product-name{
+    font-weight: 600;
+    color: #595959;
+    margin-bottom: 10px;
+}
+
+.product-price{
+    font-weight: 700;
+}
+
+.product-quantity{
+    color: #636262;
+    font-size: 14px;
 }
