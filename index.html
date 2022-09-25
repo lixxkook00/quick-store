@@ -1562,6 +1562,20 @@
         </div>
     </div>
 
+    <!-- LOADING -->
+    <div id="loading" class="loading centering">
+        <img src="./assets/img/logo.png" alt="">
+        <div class="loadingio-spinner-ellipsis-j9wfayi56n">
+            <div class="ldio-x0x70zoois">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
@@ -1614,5 +1628,10 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+    });
+
+    // loading animation
+    window.addEventListener('load', (event) => {
+        $('.loading').style.display = "none"
     });
 </script>

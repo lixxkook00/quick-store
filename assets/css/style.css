@@ -1914,3 +1914,137 @@ input.quantity {
           transform: translateX(0);
 }
 
+
+.loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.loading img:first-child{
+  width: 180px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(60px);
+}
+
+.loading img:last-child{
+  max-width: 100px;
+}
+
+ @keyframes ldio-x0x70zoois {
+    0% {
+        transform: translate(12px, 80px) scale(0);
+    }
+
+    25% {
+        transform: translate(12px, 80px) scale(0);
+    }
+
+    50% {
+        transform: translate(12px, 80px) scale(1);
+    }
+
+    75% {
+        transform: translate(80px, 80px) scale(1);
+    }
+
+    100% {
+        transform: translate(148px, 80px) scale(1);
+    }
+}
+
+@keyframes ldio-x0x70zoois-r {
+    0% {
+        transform: translate(148px, 80px) scale(1);
+    }
+
+    100% {
+        transform: translate(148px, 80px) scale(0);
+    }
+}
+
+@keyframes ldio-x0x70zoois-c {
+    0% {
+        background: #01a99a
+    }
+
+    25% {
+        background: #abbd81
+    }
+
+    50% {
+        background: #4ab848
+    }
+
+    75% {
+        background: #4ab848
+    }
+
+    100% {
+        background: #01a99a
+    }
+}
+
+.ldio-x0x70zoois div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translate(80px, 80px) scale(1);
+    background: #01a99a;
+    animation: ldio-x0x70zoois 1s infinite cubic-bezier(0, 0.5, 0.5, 1);
+}
+
+.ldio-x0x70zoois div:nth-child(1) {
+    background: #4ab848;
+    transform: translate(148px, 80px) scale(1);
+    animation: ldio-x0x70zoois-r 0.25s infinite cubic-bezier(0, 0.5, 0.5, 1), ldio-x0x70zoois-c 1s infinite step-start;
+}
+
+.ldio-x0x70zoois div:nth-child(2) {
+    animation-delay: -0.25s;
+    background: #01a99a;
+}
+
+.ldio-x0x70zoois div:nth-child(3) {
+    animation-delay: -0.5s;
+    background: #4ab848;
+}
+
+.ldio-x0x70zoois div:nth-child(4) {
+    animation-delay: -0.75s;
+    background: #4ab848;
+}
+
+.ldio-x0x70zoois div:nth-child(5) {
+    animation-delay: -1s;
+    background: #abbd81;
+}
+
+.loadingio-spinner-ellipsis-j9wfayi56n {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+    transform: scale(0.5);
+}
+
+.ldio-x0x70zoois {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+}
+
+.ldio-x0x70zoois div {
+    box-sizing: content-box;
+}
