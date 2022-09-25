@@ -23,12 +23,16 @@
 
 <body>
     <!-- HEADER -->
-    <header class="header hidden-m-t ">
+    <header class="header">
         <div class="container">
             <div class="d-flex justify-content-between">
-                <a href="/" class="header-logo">
+                <a href="/" class="header-logo hidden-m-t">
                     <img src="./assets/img/logo.png" alt="">
                 </a>
+
+                <div class="header-nav-icon centering" onclick="toggleNavMobile()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
 
                 <div class="header-search">
                     <input type="text" placeholder="Iphone 14 Pro Max...">
@@ -38,25 +42,28 @@
                 </div>
 
                 <div class="header-infor d-flex align-items-center">
-                    <div class="language">
+                    <div class="language hidden-m-t">
                         English
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
 
-                    <div class="cart">
+                    <a href="./cart.html" class="cart">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        Cart
+                    </a>
+
+                    <div class="cart mr-0">
+                        <i class="fa-solid fa-bell"></i>
                     </div>
 
-                    <div class="wallet">
+                    <div class="wallet hidden-m-t">
                         <i class="fa-solid fa-wallet"></i>
                         $ 1,680,000.00
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="nav">
+
+        <div class="nav hidden-m-t">
             <div class="container">
                 <div class="header-nav">
                     <div class="header-nav-item header-nav-item-categories active">
@@ -229,38 +236,90 @@
 
     <!-- NAVIGATION MOBILE-->
     <nav class="navigation-tab hide-on-pc hidden-low-pc">
-        <div class="navigation-tab-item">
-            <span class="navigation-tab__icon">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <span class="navigation-tab__txt">Giỏ hàng</span>
-        </div>
-        <div class="navigation-tab-item">
-            <span class="navigation-tab__icon">
-                <i class="fa-solid fa-square-poll-horizontal"></i>
-            </span>
-            <span class="navigation-tab__txt">Kết quả</span>
-        </div>
         <div class="navigation-tab-item active">
             <span class="navigation-tab__icon">
-                <img src="./assets/img/uniluckyfav.png" alt="">
+                <i class="fa-solid fa-house"></i>
             </span>
-            <span class="navigation-tab__txt">Trang chủ</span>
         </div>
         <div class="navigation-tab-item">
             <span class="navigation-tab__icon">
                 <i class="fa-solid fa-wallet"></i>
             </span>
-            <span class="navigation-tab__txt">Quản lí TK</span>
         </div>
         <div class="navigation-tab-item">
             <span class="navigation-tab__icon">
                 <i class="fa-solid fa-user"></i>
             </span>
-            <span class="navigation-tab__txt">Tài khoản</span>
         </div>
-        <div class="navigation-tab-overlay"></div>
+        <div class="navigation-tab-item">
+            <span class="navigation-tab__icon">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+        <div class="navigation-tab-item">
+            <span class="navigation-tab__icon">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </span>
+        </div>
     </nav>
+
+    <!-- NAV MOBILE -->
+    <div class="soft-menu" onclick="toggleNavMobile()">
+        <ul class="soft-menu-list soft-menu__list">
+            <li class="side-bar__item ">
+                <a href="">
+                    Clothing
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </li>
+
+            <li class="side-bar__item ">
+                <a href="">
+                    Phone
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </li>
+
+            <li class="side-bar__item">
+                <a href="">Collection</a>
+            </li>
+
+            <li class="side-bar__item">
+                <a href="">Electronics</a>
+            </li>
+
+            <li class="side-bar__item">
+                <a href="">Sports & Outdoor</a>
+            </li>
+
+            <li class="side-bar__item">
+                <a href="">Jewelry & Watches</a>
+            </li>
+
+            <li class="side-bar__item">
+                <a href="">Tools, Industrial</a>
+            </li>
+
+            <li class="side-bar__item">
+                <a href="">Automobiles & Motorcycles</a>
+            </li>
+
+            <li class="side-bar__item">
+                <a href="">Health,Beauty & Hair</a>
+            </li>
+
+            <li class="side-bar__item">
+                <a href="">Computers & Office</a>
+            </li>
+
+            <li class="side-bar__item">
+                <a href="" class="">
+                    Accessories
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
@@ -418,7 +477,7 @@
         </div>
 
         <!-- banner -->
-        <div class="container mt-4">
+        <div class="container mt-4 hidden-m-t">
             <div class="row">
                 <div class="col-lg-4">
                     <img class="banner" src="./assets/img/home/Banner-small-1.jpg" alt="">
@@ -442,7 +501,8 @@
                 </div>
 
                 <div class="product-list product-list-6">
-                    <div class="product">
+
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -478,9 +538,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -516,9 +576,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -553,9 +613,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -590,9 +650,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -628,9 +688,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -663,9 +723,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -701,9 +761,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -739,9 +799,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -776,9 +836,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -813,9 +873,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -851,9 +911,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -886,9 +946,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -900,7 +960,8 @@
                         </div>
                         <div class="product-infor">
                             <div class="product-name">
-                                2021 Apple MacBook Pro (16-inch, Apple M1 Max chip with 10‑core CPU and 32‑core
+                                2021 Apple MacBook Pro (16-inch, Apple M1 Max chip with 10‑core CPU and
+                                32‑core
                                 GPU,
                                 32GB RAM, 1TB SSD) - Space Gray
                             </div>
@@ -924,9 +985,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -937,10 +998,12 @@
                         </div>
                         <div class="product-infor">
                             <div class="product-name">
-                                2022 Apple MacBook Air Laptop with M2 chip: 13.6-inch Liquid Retina Display, 8GB
+                                2022 Apple MacBook Air Laptop with M2 chip: 13.6-inch Liquid Retina
+                                Display, 8GB
                                 RAM,
                                 256GB SSD Storage, Backlit
-                                Keyboard, 1080p FaceTime HD Camera. Works with iPhone and iPad; Midnight
+                                Keyboard, 1080p FaceTime HD Camera. Works with iPhone and iPad;
+                                Midnight
                             </div>
 
                             <div class="d-flex align-items-center justify-content-between">
@@ -962,9 +1025,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -975,7 +1038,8 @@
                         </div>
                         <div class="product-infor">
                             <div class="product-name">
-                                2019 Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage, 2.6GHz Intel Core i7)
+                                2019 Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage, 2.6GHz
+                                Intel Core i7)
                                 - Space
                                 Gray
                             </div>
@@ -999,9 +1063,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -1012,7 +1076,8 @@
                         </div>
                         <div class="product-infor">
                             <div class="product-name">
-                                Apple MacBook Air (13-inch Retina Display, 1.6GHz Dual-core Intel Core i5,
+                                Apple MacBook Air (13-inch Retina Display, 1.6GHz Dual-core
+                                Intel Core i5,
                                 256GB) - Gold
                                 (Latest Model) (Renewed)
                             </div>
@@ -1036,9 +1101,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -1049,10 +1114,12 @@
                         </div>
                         <div class="product-infor">
                             <div class="product-name">
-                                2022 Apple MacBook Pro Laptop with M2 chip: 13-inch Retina Display, 8GB RAM,
+                                2022 Apple MacBook Pro Laptop with M2 chip: 13-inch
+                                Retina Display, 8GB RAM,
                                 256GB
                                 ​​​​​​​SSD ​​​​​​​Storage, Touch Bar,
-                                Backlit Keyboard, FaceTime HD Camera. Works with iPhone and iPad; Space Gray
+                                Backlit Keyboard, FaceTime HD Camera. Works with iPhone
+                                and iPad; Space Gray
                             </div>
 
                             <div class="d-flex align-items-center justify-content-between">
@@ -1074,9 +1141,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="sale">
                             10%
                             <br>
@@ -1087,7 +1154,8 @@
                         </div>
                         <div class="product-infor">
                             <div class="product-name">
-                                Apple 32-inch Pro Display XDR with Retina 6K Display - Standard Glass
+                                Apple 32-inch Pro Display XDR with Retina 6K Display
+                                - Standard Glass
                             </div>
 
                             <div class="d-flex align-items-center justify-content-between">
@@ -1109,7 +1177,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -1126,7 +1195,7 @@
 
                 <div class="product-list product-list-5">
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="product-img centering">
                             <img src="./assets/img/home/product-1.jpg" alt="">
                         </div>
@@ -1160,9 +1229,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="product-img centering">
                             <img src="./assets/img/home/product-2.jpg" alt="">
                         </div>
@@ -1196,9 +1265,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="product-img centering">
                             <img src="./assets/img/home/product-3.jpg" alt="">
                         </div>
@@ -1231,9 +1300,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="product-img centering">
                             <img src="https://imgaz2.staticbg.com/thumb/large/oaupload/banggood/images/5E/C2/3efe9827-6e60-4f92-8bd8-423e4655222d.jpg.webp"
                                 alt="">
@@ -1250,7 +1319,8 @@
                         </div>
                         <div class="product-infor">
                             <div class="product-name">
-                                Bakeey Armor Shockproof Anti-Fingerprint with Ring Bracket Stand PC + TPU Protective
+                                Bakeey Armor Shockproof Anti-Fingerprint with
+                                Ring Bracket Stand PC + TPU Protective
                                 Case for Samsung Galaxy S20 /
                                 Galaxy S20 5G 2020 - Silver
                             </div>
@@ -1274,9 +1344,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
+                    <a href="/detail.html" class="product">
                         <div class="product-img centering">
                             <img src="https://imgaz1.staticbg.com/thumb/large/oaupload/banggood/images/4C/36/fe6298a7-7f26-45ed-9a77-c288e0f3ca40.jpg.webp"
                                 alt="">
@@ -1291,7 +1361,9 @@
                         </div>
                         <div class="product-infor">
                             <div class="product-name">
-                                Wltoys 144010 1/14 2.4G 4WD High Speed Racing Brushless RC Car Vehicle Models 75km/h
+                                Wltoys 144010 1/14 2.4G 4WD High Speed
+                                Racing Brushless RC Car Vehicle Models
+                                75km/h
                             </div>
 
                             <div class="d-flex align-items-center justify-content-between">
@@ -1313,7 +1385,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1424,8 +1496,11 @@
                         </div>
                         <ul>
                             <li>
-                                By subscribing you agree to receive email from us.
-                                Please read our Privacy Policy
+                                By subscribing you agree
+                                to receive email from
+                                us.
+                                Please read our Privacy
+                                Policy
                             </li>
                         </ul>
                     </div>
@@ -1511,7 +1586,8 @@
                     <ul>
                         <li>
                             © 2022 ITG
-                            TERMS PRIVACY SPECIALIZED AFFAIRS
+                            TERMS PRIVACY SPECIALIZED
+                            AFFAIRS
                         </li>
                     </ul>
                 </div>

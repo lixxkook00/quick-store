@@ -14,17 +14,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
 
-    <!-- BTLOL -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
     <!-- FONT HEHE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -246,14 +235,10 @@
     </header>
 
     <!-- HEADER MOBILE-->
-    <header class="header header-mobile hide-on-pc d-flex justify-content-between align-items-center">
-        <a href="./navigate-wallet.html" class="header-back">
-            <i class="fa-solid fa-chevron-left"></i>
-        </a>
+    <header class="header hide-on-pc">
         <div class="header-title text-center">
-            Deposit
+            Wallet
         </div>
-        <div class=""></div>
     </header>
 
     <!-- NAVIGATION MOBILE-->
@@ -287,177 +272,15 @@
 
     <!-- MAIN -->
     <div class="main-content container">
-        <div class="row">
+        <div class="primary-block navigation-block">
 
-            <div class="col-lg-3">
-                <div class="side primary-block">
-                    <div class="side-infor d-flex align-items-center justify-content-center flex-column">
-                        <img class="avt"
-                            src="https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-1/283962131_102332829166972_3991285977109227663_n.jpg?stp=c81.0.200.200a_dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=pGtvaMsduRoAX_6bEhh&_nc_ht=scontent.fsgn2-7.fna&oh=00_AT-w93_lv5MvpMRUERZdBJvqhK6uo5N4ABQ34tBBcAQTGw&oe=63323459"
-                            alt="">
+            <a href="./deposit.html" class="side-nav-item">
+                <i class="fa-solid fa-money-bill-wheat"></i>Deposit
+            </a>
 
-                        <div class="side-name">
-                            The Best Designer Ever <i class="fa-solid fa-check"></i>
-                        </div>
-                    </div>
-
-                    <div class="side-nav">
-                        <div class="side-nav-item">
-                            <i class="fa-solid fa-user"></i> My Profile
-                        </div>
-
-                        <div class="side-nav-item ">
-                            <i class="fa-solid fa-money-bill-transfer"></i> Transaction
-                        </div>
-
-                        <div class="side-nav-item active">
-                            <i class="fa-solid fa-money-bill-wheat"></i>Deposit
-                        </div>
-
-                        <div class="side-nav-item">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>With draw
-                        </div>
-
-                        <div class="side-nav-item">
-                            <i class="fa-solid fa-store"></i> My Shop
-                        </div>
-
-                        <div class="side-nav-item">
-                            <i class="fa-solid fa-shield-halved"></i> Security
-                        </div>
-                    </div>
-
-                    <div class="log-out">
-                        <div class="side-nav-item">
-                            <i class="fa-solid fa-right-from-bracket"></i> Log out
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-9">
-                <div class="">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <form class="primary-form">
-
-                                <div class="form-group">
-                                    <div class="form-label">
-                                        Deposit with currency
-                                    </div>
-                                    <div class="select-wrapper">
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">USDT</option>
-                                            <option value="saab">COIN</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="form-label">
-                                        Blockchain network
-                                    </div>
-                                    <div class="select-wrapper">
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">TRON</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="form-label">
-                                        Amount
-                                    </div>
-                                    <input type="number" class="form-control primary-input" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="$100">
-                                </div>
-
-                                <button type="submit" class="primary-blue-button w-100 mt-3">Deposit</button>
-                            </form>
-                        </div>
-
-                        <div class="col-lg-6 mt-2">
-                            <div class="primary-form">
-                                <div class="deposit-title text-center">
-                                    COIN wil be deposited immeddiately
-                                    <br>
-                                    after 1 network confimation
-                                </div>
-
-                                <div class="centering">
-                                    <img class="deposit-qr" src="./assets/img/qr.png" alt="">
-                                </div>
-
-                                <div class="deposit-desc text-center">
-                                    Please send <span class="value">198 COIN</span> to this address:
-                                    <br>
-
-                                    <span class="value">
-                                        abndy157964894hfjg3469852hrg
-                                    </span>
-
-                                    <br>
-
-                                    Fund transfer processing
-                                    <br>
-
-                                    <span class="red-text">
-                                        Cancel
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="primary-block mt-3">
-                        <div class="transaction">
-                            <div class="transaction-table">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <th>Time</th>
-                                            <th>Code</th>
-                                            <th>Currency</th>
-                                            <th>Amount</th>
-                                            <th>Status</th>
-                                            <th>Hash</th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                2022-08-01
-                                                <br>
-                                                04:56
-                                            </td>
-                                            <td>
-                                                D65892435
-                                            </td>
-                                            <td>
-                                                COIN
-                                            </td>
-                                            <td class="transaction-status transaction-status--Complete">
-                                                20.00 COIN
-                                            </td>
-                                            <td class="transaction-status transaction-status--Complete">
-                                                Completed
-                                            </td>
-                                            <td>
-                                                hash
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class="transaction-pagination">
-                                <div class="transaction-pagination-item active">
-                                    1
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="./withdraw.html" class="side-nav-item">
+                <i class="fa-solid fa-hand-holding-dollar"></i>With draw
+            </a>
         </div>
     </div>
 

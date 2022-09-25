@@ -79,6 +79,10 @@ select {
   appearance: none;
 }
 
+a{
+    display: flex !important;
+}
+
 .select-wrapper {
   position: relative;
 }
@@ -798,6 +802,9 @@ table td, table th {
     margin-bottom: 10px;
 
     transition: all 0.5s ease-in-out ;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .product:hover{
@@ -1210,11 +1217,15 @@ input.quantity {
     margin-right: 5px;
 }
 
+.cart-item-price{
+    margin-bottom: 10px;
+}
+
 .cart-item-price-retail{
     text-decoration: line-through;
     color: #595959;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-top: 4px;
 }
 
 .cart-shop-avt{
@@ -1250,6 +1261,10 @@ input.quantity {
 
 .product-price-retail{
     font-size: 14px;
+}
+
+.header-title{
+    font-weight: 600;
 }
 
 /* SIDE BAR */
@@ -1565,10 +1580,13 @@ input.quantity {
 
 .detail-review {
     padding: 0 10px;
-    border-right: 1px solid #ddd;
     color: #9F9F9F;
     font-size: 14px;
     font-weight: 400;
+}
+
+.detail-review:not(:last-child){
+    border-right: 1px solid #ddd;
 }
 
 .detail-title {
@@ -1809,3 +1827,89 @@ input.quantity {
 .payment-detail .price{
     font-size: 22px;
 }
+
+.navigation-tab {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    flex-shrink: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+.navigation-tab-item {
+    width: 20%;
+    text-align: center;
+    justify-content: center;
+}
+
+.navigation-tab-item.active{
+    color: #4AB848;
+}
+
+.header-nav-icon{
+    margin-right: 8px;
+}
+
+
+/* NAV MOBILE */
+.soft-menu {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.407);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all linear 0.01s;
+  transition: all linear 0.01s;
+  opacity: 1;
+  z-index: 1232323232;
+}
+
+.soft-menu.open {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.soft-menu-list{
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    max-width: 300px;
+}
+
+.soft-menu.open {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.soft-menu__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 290px;
+  height: 100vh;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.soft-menu__list.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
