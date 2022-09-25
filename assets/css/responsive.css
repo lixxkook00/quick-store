@@ -390,6 +390,10 @@
     .width-draw .value {
         font-size: 17px;
     }
+
+    .transaction-pagination{
+        margin-top: 10px;
+    }
 }
 
 /* Tablet Only */
@@ -404,6 +408,15 @@
 @media (max-width: 739px) {
     .hidden-m{
         display: none;
+    }
+
+    .transaction-table tr td:first-child {
+        font-size: 10px;
+    }
+
+    table td, table th {
+        text-align: center;
+        font-size: 10px;
     }
 }
 
