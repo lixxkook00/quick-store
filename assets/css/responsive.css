@@ -54,7 +54,7 @@
     }
 
     .main-content {
-        margin-top: 55px;
+        margin-top: 100px;
         margin-bottom: 50px;
     }
 
@@ -417,6 +417,18 @@
     table td, table th {
         text-align: center;
         font-size: 10px;
+    }
+
+    .primary-title{
+        padding-bottom: 0;
+    }
+
+    .count-down{
+        padding-bottom: 0;
+    }
+
+    .flash-sale {
+        margin-top: 5px;
     }
 }
 

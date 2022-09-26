@@ -37,7 +37,7 @@
 
 <body>
     <!-- HEADER -->
-    <header class="header">
+    <header class="header hidden-m-t">
         <div class="container">
             <div class="d-flex justify-content-between">
                 <a href="/" class="header-logo hidden-m-t">
@@ -63,6 +63,10 @@
 
                     <a href="./cart.html" class="cart">
                         <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+
+                    <a href="./my-profile.html" class="cart">
+                        <i class="fa-solid fa-user"></i>
                     </a>
 
                     <div class="cart mr-0">
@@ -251,6 +255,89 @@
             </div>
         </div>
     </header>
+
+    <!-- HEADER MOBILE -->
+    <div class="header header-mobile hide-on-pc">
+        <div class="header-mobile-content d-flex align-items-center justify-content-between">
+            <div class="d-flex">
+                <div class="header-nav-icon centering hide-on-pc" onclick="toggleNavMobile()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <a href="/" class="header-mobile-logo">
+                    <img src="./assets/img/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="d-flex">
+                <a href="./cart.html" class="header-mobile-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <div id="search-icon" class="header-mobile-icon header-mobile-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="header-mobile-nav" class="header-mobile-nav d-flex">
+            <div class="header-mobile-nav-wrapper hiden-scroll-bar d-flex">
+                <div class="header-mobile-nav-item active">
+                    All
+                </div>
+                <div class="header-mobile-nav-item">
+                    Phone
+                </div>
+                <div class="header-mobile-nav-item">
+                    Laptop
+                </div>
+                <div class="header-mobile-nav-item">
+                    Shoes
+                    & Bags
+                </div>
+                <div class="header-mobile-nav-item">
+                    Toys
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div id="search" class="search">
+        <div class="search-header">
+            <div id="hide-search" class="search-icon">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+
+            <input type="text" class="search-input" placeholder="Search...">
+
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+
+        <div class="search-content">
+            <div class="search-title">
+                Hot Searches
+            </div>
+
+            <div class="search-list">
+                <div class="search-item">
+                    Iphone 14
+                </div>
+
+                <div class="search-item">
+                    ps5
+                </div>
+
+                <div class="search-item">
+                    tv
+                </div>
+
+                <div class="search-item">
+                    sneaker
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- NAVIGATION MOBILE-->
     <nav class="navigation-tab hide-on-pc hidden-low-pc">
@@ -513,13 +600,30 @@
         <div class="container mt-3">
             <div class="primary-block">
                 <div class="d-flex align-items-center justify-content-between">
-                    <div class="primary-title">
-                        Fla <i class="fa-solid fa-bolt flash-icon"></i> h Sale
+                    <div class="d-flex align-items-center">
+                        <div class="primary-title">
+                            Fla <i class="fa-solid fa-bolt flash-icon"></i> h Sale
+                        </div>
+                        <div class="count-down">
+                            <div id="sale-countdown-hours" class="count-down-item">
+                                00
+                            </div>
+                            :
+                            <div id="sale-countdown-min" class="count-down-item">
+                                00
+                            </div>
+                            :
+                            <div id="sale-countdown-sec" class="count-down-item">
+                                00
+                            </div>
+                        </div>
                     </div>
+
                     <a href="./flash-sale.html" class="view-more">
                         View more
                     </a>
                 </div>
+
 
                 <div class="swiper flash-sale">
                     <div class="swiper-wrapper">
@@ -1634,4 +1738,58 @@
     window.addEventListener('load', (event) => {
         $('.loading').style.display = "none"
     });
+
+    // hidden nav mobile on scroll
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (window.innerWidth < 740) {
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header-mobile-nav").style.top = "100%";
+            } else {
+                document.getElementById("header-mobile-nav").style.top = "-100%";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    }
+
+    // show search page
+    document.getElementById("search-icon").onclick = function () {
+        document.getElementById("search").classList.toggle("active")
+    }
+
+    document.getElementById("hide-search").onclick = function () {
+        document.getElementById("search").classList.remove("active")
+    }
+
+    // Set the date we're counting down to
+    var countDownDate = new Date("Sep 29, 2022 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // document.getElementById("sale-countdown-day").innerHTML = days
+        document.getElementById("sale-countdown-hours").innerHTML = hours < 10 ? `0${hours}` : hours
+        document.getElementById("sale-countdown-min").innerHTML = minutes < 10 ? `0${minutes}` : minutes
+        document.getElementById("sale-countdown-sec").innerHTML = seconds < 10 ? `0${seconds}` : seconds
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
 </script>
