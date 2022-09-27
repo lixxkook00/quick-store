@@ -450,7 +450,7 @@ a:hover{
 }
 
 .header-infor div{
-    margin: 0 10px;
+    /* margin: 0 10px; */
 }
 
 .header-infor div i{
@@ -2071,7 +2071,7 @@ input.quantity {
 }
 
 .header-mobile i{
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .header-mobile-logo{
@@ -2204,6 +2204,8 @@ input.quantity {
 .header-second{
     padding: 10px !important;
 }
+
+.language {margin-right: 10px;}
 
 .count-down{
     color: #000;
