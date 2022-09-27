@@ -2230,3 +2230,20 @@ input.quantity {
 div#search-icon {
     padding: 0 6px;
 }
+
+.loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.loading img:first-child{
+  width: 180px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(60px);
+}

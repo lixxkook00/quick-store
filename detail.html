@@ -429,25 +429,39 @@
                         </div>
 
                         <div class="detail-title mt-3">
-                            Color: <div class="color" style="color: #2276BF;">Blue</div>
+                            Color: <div id="color-text" class="color" style="color: #2276BF;">Blue</div>
                         </div>
 
                         <div class="d-flex align-items-center mb-4">
-                            <div class="color-item" style="background-color: #2F6010"></div>
-                            <div class="color-item active" style="background-color: #2276BF"></div>
-                            <div class="color-item" style="background-color: #5E5E59"></div>
-                            <div class="color-item" style="background-color: #E3E5E3"></div>
-                            <div class="color-item" style="background-color: #FCEBD3"></div>
+                            <div data-color-code="2F6010" data-color="Green" class="color-item"
+                                style="background-color: #2F6010">
+                            </div>
+
+                            <div data-color-code="2276BF" data-color="Blue" class="color-item active"
+                                style="background-color: #2276BF">
+                            </div>
+
+                            <div data-color-code="5E5E59" data-color="Brown" class="color-item"
+                                style="background-color: #5E5E59">
+                            </div>
+
+                            <div data-color-code="E3E5E3" data-color="Silver" class="color-item"
+                                style="background-color: #E3E5E3">
+                            </div>
+
+                            <div data-color-code="FCEBD3" data-color="Light Pink" class="color-item"
+                                style="background-color: #FCEBD3">
+                            </div>
                         </div>
 
                         <div class="d-flex">
-                            <div class="detail-button buy-button">
+                            <a href="./checkout.html" class="detail-button buy-button justify-content-center">
                                 BUY NOW
-                            </div>
+                            </a>
 
-                            <div class="detail-button buy-add-cart">
+                            <a href="./cart.html" class="detail-button buy-add-cart justify-content-center">
                                 ADD TO CART
-                            </div>
+                            </a>
                         </div>
 
                         <div class="detail-action d-flex">
@@ -765,7 +779,7 @@
 <script src="./assets/css/bootstrap-5/js/bootstrap.min.js"></script>
 <script src="./assets/css/bootstrap-5/js/bootstrap.bundle.js"></script>
 <script src="./assets/css/bootstrap-5/js/poper.min.js"></script>
-<script src="./assets/js/jquery.min.js"></script>
+
 <script src="./assets/js/wow.min.js"></script>
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/swiper-bundle.min.js"></script>
@@ -780,11 +794,6 @@
             el: ".swiper-pagination",
             clickable: true,
         },
-        // auto
-        // autoplay: {
-        //     delay: 2000,
-        //     disableOnInteraction: false,
-        // },
         breakpoints: {
             // when window width is >= 120px
             120: {
@@ -801,13 +810,9 @@
                 spaceBetween: 12
             }
         },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
     });
 
-    var swiper = new Swiper(".detail-main", {
+    var swiper2 = new Swiper(".detail-main", {
         slidesPerView: 6,
         spaceBetween: 10,
         loop: true,
@@ -815,11 +820,7 @@
             el: ".swiper-pagination",
             clickable: true,
         },
-        // auto
-        // autoplay: {
-        //     delay: 2000,
-        //     disableOnInteraction: false,
-        // },
+
         breakpoints: {
             // when window width is >= 120px
             120: {
@@ -837,4 +838,26 @@
             }
         },
     });
+
+    // handle active img
+    document.querySelectorAll('.detail-list .swiper-slide').forEach((element) => {
+        element.onclick = () => {
+            console.log(element.dataset.swiperSlideIndex);
+            swiper2.slideTo(parseInt(element.dataset.swiperSlideIndex) + 1)
+        }
+    })
+
+    // handle pick color
+    $$('.color-item').forEach((element) => {
+        element.onclick = () => {
+            $$('.color-item').forEach((element) => {
+                element.classList.remove('active')
+            })
+            element.classList.add('active')
+
+            $('#color-text').innerText = element.dataset.color
+            $('#color-text').style.color = `#${element.dataset.colorCode}`
+        }
+    })
+
 </script>
