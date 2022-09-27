@@ -2247,3 +2247,46 @@ div#search-icon {
   transition: all 0.5s ease-in-out;
   transform: translateY(60px);
 }
+
+.navigation-profile-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-profile-item img{
+    width: 30px;
+}
+
+.navigation-profile-item-icon{
+    height: 45px;
+    width: 45px;
+
+    background-color: #ddd;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-profile-desc{
+    font-size: 14px;
+    color: #8E8E8E;
+    font-weight: 400;
+
+    min-height: 42px;
+    margin-top: 8px;
+}
+
+.navigation-profile-title{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.navigation-profile-avt{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
