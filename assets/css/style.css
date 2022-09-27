@@ -2226,3 +2226,7 @@ input.quantity {
 
     border-radius: 4px;
 }
+
+div#search-icon {
+    padding: 0 6px;
+}
