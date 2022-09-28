@@ -195,8 +195,6 @@ a:hover{
     background-image: linear-gradient(180deg, #003523 13%, #003523 73%, #00875a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
 }
 
 .primary-blue-button{
@@ -2293,8 +2291,23 @@ div#search-icon {
 
 .text{
     margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .navigation-block .navigation-profile-item:not(:last-child){
     margin-right: 30px;
+}
+
+.navigation-profile-name{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.gradient-price{
+    user-select: none;
+    font-weight: 800 ;
+    font-size: 18px;
+    background-image: linear-gradient(180deg, #006838 7%, #4AB848 51%, #006838 91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
