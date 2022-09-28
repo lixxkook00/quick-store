@@ -291,10 +291,10 @@ a:hover{
 .primary-block{
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     margin-bottom: 10px;
     margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
 .primary-block-l{
@@ -2301,6 +2301,7 @@ div#search-icon {
 .navigation-profile-name{
     font-weight: 600;
     font-size: 20px;
+    padding-bottom: 5vh;
 }
 
 .gradient-price{
@@ -2310,4 +2311,69 @@ div#search-icon {
     background-image: linear-gradient(180deg, #006838 7%, #4AB848 51%, #006838 91%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.gradient-dollar{
+    user-select: none;
+    font-weight: 800 ;
+    font-size: 18px;
+    background-image: linear-gradient(180deg, #282C38 7%, #282c3882 51%, #282C38 91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.second-content{
+    min-height: calc(100vh - 110px);
+    padding: 120px 0 0;
+    position: relative;
+}
+
+.navigation-wallet{
+    min-height: calc(100vh - 88px);
+    margin: 44px 0;
+    padding: 10px;
+    position: relative;
+    background: #000 url(../img/wallet-bg.jpg) no-repeat center center;
+    background-size: auto 100%;
+    /* background-color: #4AB848; */
+}
+
+.navigation-wallet-price{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navigation-wallet-dollar{
+    font-size: 24px;
+}
+
+.navigation-wallet-control{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 20px 10px;
+}
+
+.navigation-wallet-item{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 12px 10px;
+    background-color: rgba(221, 221, 221, 0.537);
+    min-height: 54px;
+}
+
+.navigation-wallet-item:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.navigation-wallet-item-icon{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.navigation-wallet-desc{
+    font-weight: 600;
 }

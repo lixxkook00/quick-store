@@ -14,6 +14,17 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
 
+    <!-- BTLOL -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
     <!-- FONT HEHE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +41,7 @@
                     <img src="./assets/img/logo.png" alt="">
                 </a>
 
-                <div class="header-nav-icon centering hide-on-pc" onclick="toggleNavMobile()">
+                <div class="header-nav-icon hide-on-pc centering" onclick="toggleNavMobile()">
                     <i class="fa-solid fa-bars"></i>
                 </div>
 
@@ -240,11 +251,11 @@
 
     <!-- HEADER MOBILE-->
     <header class="header header-second  hide-on-pc d-flex justify-content-between align-items-center">
-        <a href="./navigate-profile.html" class="header-back">
+        <a href="./navigate-wallet.html" class="header-back">
             <i class="fa-solid fa-chevron-left"></i>
         </a>
         <div class="header-title text-center">
-            My profile
+            Transfer
         </div>
         <div class=""></div>
     </header>
@@ -256,12 +267,12 @@
                 <i class="fa-solid fa-house"></i>
             </span>
         </a>
-        <a href="./navigate-wallet.html" class="navigation-tab-item">
+        <a href="./navigate-wallet.html" class="navigation-tab-item active">
             <span class="navigation-tab__icon">
                 <i class="fa-solid fa-wallet"></i>
             </span>
         </a>
-        <a href="./navigate-profile.html" class="navigation-tab-item active">
+        <a href="./navigate-profile.html" class="navigation-tab-item ">
             <span class="navigation-tab__icon">
                 <i class="fa-solid fa-user"></i>
             </span>
@@ -271,7 +282,7 @@
                 <i class="fa-solid fa-heart"></i>
             </span>
         </a>
-        <a href="./transaction.html" class="navigation-tab-item">
+        <a href="./transaction.html" class="navigation-tab-item ">
             <span class="navigation-tab__icon">
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
             </span>
@@ -279,114 +290,181 @@
     </nav>
 
     <!-- MAIN -->
-    <div class="main-content container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="side primary-block ">
-                    <div class="side-infor d-flex align-items-center justify-content-center flex-column">
-                        <img class="avt" src="https://giovannicosmetics.com/wp-content/uploads/2020/04/For-Men.jpg"
-                            alt="">
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="side primary-block ">
+                        <div class="side-infor d-flex align-items-center justify-content-center flex-column">
+                            <img class="avt" src="https://giovannicosmetics.com/wp-content/uploads/2020/04/For-Men.jpg"
+                                alt="">
 
-                        <div class="side-name">
-                            Elon Much <i class="fa-solid fa-check"></i>
+                            <div class="side-name">
+                                Elon Much <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+
+                        <div class="side-nav">
+                            <a href="./my-profile.html" class="side-nav-item ">
+                                <i class="fa-solid fa-user"></i> My Profile
+                            </a>
+
+                            <a href="./transaction.html" class="side-nav-item">
+                                <i class="fa-solid fa-money-bill-transfer"></i> Transaction
+                            </a>
+
+                            <a href="./deposit.html" class="side-nav-item ">
+                                <i class="fa-solid fa-money-bill-wheat"></i>Deposit
+                            </a>
+
+                            <a href="./withdraw.html" class="side-nav-item">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>With draw
+                            </a>
+
+                            <a href="./transfer.html" class="side-nav-item active">
+                                <i class="fa-solid fa-comments-dollar"></i> Transfer
+                            </a>
+
+                            <a href="./my-shop.html" class="side-nav-item">
+                                <i class="fa-solid fa-store"></i> My Shop
+                            </a>
+
+                            <a href="./security.html" class="side-nav-item">
+                                <i class="fa-solid fa-shield-halved"></i> Security
+                            </a>
+
+                            <a href="./purchase-history.html" class="side-nav-item">
+                                <i class="fa-solid fa-book-bookmark"></i> Purchase History
+                            </a>
+                        </div>
+
+                        <div class="log-out">
+                            <a href="./login.html" class="side-nav-item">
+                                <i class="fa-solid fa-right-from-bracket"></i> Log out
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="width-draw primary-form">
+                                <div class="width-draw-balance">
+                                    Available Balance:
+
+                                    <span class="value">
+                                        $ 1,680,000.00
+                                    </span>
+                                </div>
+
+                                <div class="width-draw-fee">
+                                    Fee:
+
+                                    <span class="value">
+                                        0.2 %
+                                    </span>
+                                </div>
+                            </div>
+
+                            <form class="primary-form">
+
+                                <div class="form-group">
+                                    <div class="form-label">
+                                        From wallet
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="cars" id="cars">
+                                            <option value="volvo">Choose a wallet</option>
+                                            <option value="volvo">USDT</option>
+                                            <option value="saab">COIN</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <div class="form-label">
+                                        Recipient's username:
+                                    </div>
+                                    <input type="text" class="form-control primary-input" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="">
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <div class="form-label">
+                                        Amount
+                                    </div>
+                                    <input type="text" class="form-control primary-input" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="">
+                                </div>
+
+                                <div class="form-group mt-4">
+                                    <div class="form-label">
+                                        Security passwourd
+                                    </div>
+                                    <input type="text" class="form-control primary-input" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Security passwourde">
+                                </div>
+
+                                <div class="form-group mt-4">
+                                    <div class="form-label">
+                                        2 FAcode
+                                    </div>
+                                    <input type="text" class="form-control primary-input" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="2 FAcodee">
+                                </div>
+
+                                <button type="submit" class="primary-blue-button w-100 mt-3">Complete</button>
+                            </form>
                         </div>
                     </div>
 
-                    <div class="side-nav">
-                        <a href="./my-profile.html" class="side-nav-item active">
-                            <i class="fa-solid fa-user"></i> My Profile
-                        </a>
+                    <div class="primary-block mt-3">
+                        <div class="transaction">
+                            <div class="transaction-table">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>Time</th>
+                                            <th>Code</th>
+                                            <th>Fee</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Hash</th>
+                                        </tr>
 
-                        <a href="./transaction.html" class="side-nav-item">
-                            <i class="fa-solid fa-money-bill-transfer"></i> Transaction
-                        </a>
+                                        <tr>
+                                            <td>
+                                                2022-08-01
+                                                <br>
+                                                04:56
+                                            </td>
+                                            <td>
+                                                D65892435
+                                            </td>
+                                            <td>
+                                                2 COIN
+                                            </td>
+                                            <td class="transaction-status transaction-status--Complete">
+                                                20.00 COIN
+                                            </td>
+                                            <td class="transaction-status transaction-status--Complete">
+                                                Completed
+                                            </td>
+                                            <td>
+                                                hash
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        <a href="./deposit.html" class="side-nav-item">
-                            <i class="fa-solid fa-money-bill-wheat"></i>Deposit
-                        </a>
-
-                        <a href="./withdraw.html" class="side-nav-item">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>With draw
-                        </a>
-
-                        <a href="./transfer.html" class="side-nav-item">
-                            <i class="fa-solid fa-comments-dollar"></i> Transfer
-                        </a>
-
-                        <a href="./my-shop.html" class="side-nav-item">
-                            <i class="fa-solid fa-store"></i> My Shop
-                        </a>
-
-                        <a href="./security.html" class="side-nav-item">
-                            <i class="fa-solid fa-shield-halved"></i> Security
-                        </a>
-
-                        <a href="./purchase-history.html" class="side-nav-item">
-                            <i class="fa-solid fa-book-bookmark"></i> Purchase History
-                        </a>
-                    </div>
-
-                    <div class="log-out">
-                        <a href="./login.html" class="side-nav-item">
-                            <i class="fa-solid fa-right-from-bracket"></i> Log out
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-9">
-                <div class="primary-block primary-block-l">
-
-                    <div class="wrapper-form centering">
-                        <form class="">
-                            <div class="centering mb-4">
-                                <div class="profile-form-avt">
-                                    <img class="profile-form-avt-img"
-                                        src="https://giovannicosmetics.com/wp-content/uploads/2020/04/For-Men.jpg"
-                                        alt="">
-
-                                    <div class="profile-form-changeavt centering">
-                                        <i class="fa-solid fa-camera"></i>
-                                    </div>
+                            <div class="transaction-pagination">
+                                <div class="transaction-pagination-item active">
+                                    1
                                 </div>
                             </div>
-
-                            <div class="profile-form form-group d-flex align-items-center">
-                                <div class="form-label">
-                                    Name <span class="primary-text">*</span>
-                                </div>
-                                <input value="Elon Much" type="text" class="form-control primary-input"
-                                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
-                            </div>
-
-                            <div class="profile-form form-group d-flex align-items-center">
-                                <div class="form-label">
-                                    Email
-                                </div>
-                                <input value="elonmuchhhh@gmail.com" type="email" class="form-control primary-input"
-                                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail Address">
-                            </div>
-
-                            <div class="profile-form form-group d-flex align-items-center">
-                                <div class="form-label">
-                                    Password <span class="primary-text">*</span>
-                                </div>
-                                <input value="*******" type="password" class="form-control primary-input"
-                                    id="exampleInputPassword1" placeholder="Password">
-                            </div>
-
-                            <div class="profile-form form-group d-flex align-items-center">
-                                <div class="form-label">
-                                    Shop name
-                                </div>
-                                <input value="Yeezy" type="text" class="form-control primary-input"
-                                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Shop name">
-                            </div>
-
-                            <div class="d-flex justify-content-end">
-                                <button type="submit" class="primary-blue-button profile-button">Update</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

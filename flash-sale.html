@@ -23,7 +23,7 @@
 
 <body>
     <!-- HEADER -->
-    <header class="header">
+    <header class="header hidden-m-t">
         <div class="container">
             <div class="d-flex justify-content-between">
                 <a href="/" class="header-logo hidden-m-t">
@@ -237,6 +237,50 @@
             </div>
         </div>
     </header>
+
+    <!-- HEADER MOBILE -->
+    <div class="header header-mobile hide-on-pc">
+        <div class="header-mobile-content d-flex align-items-center justify-content-between">
+            <div class="d-flex">
+                <div class="header-nav-icon centering hide-on-pc" onclick="toggleNavMobile()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <a href="/" class="header-mobile-logo">
+                    <img src="./assets/img/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <a href="./cart.html" class="header-mobile-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <div id="search-icon" class="header-mobile-icon header-mobile-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="header-mobile-nav" class="header-mobile-nav d-flex">
+            <div class="header-mobile-nav-wrapper hiden-scroll-bar d-flex">
+                <a href="/" class="header-mobile-nav-item active">
+                    All
+                </a>
+                <a href="./phone.html" class="header-mobile-nav-item">
+                    Phone
+                </a>
+                <a class="header-mobile-nav-item">
+                    Laptop
+                </a>
+                <a class="header-mobile-nav-item">
+                    Shoes
+                    & Bags
+                </a>
+                <a class="header-mobile-nav-item">
+                    Toys
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- NAVIGATION MOBILE-->
     <nav class="navigation-tab hide-on-pc hidden-low-pc">
@@ -1652,4 +1696,18 @@
             prevEl: ".swiper-button-prev",
         },
     });
+
+    // hidden nav mobile on scroll
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (window.innerWidth < 740) {
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header-mobile-nav").style.top = "100%";
+            } else {
+                document.getElementById("header-mobile-nav").style.top = "-100%";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    } 
 </script>
