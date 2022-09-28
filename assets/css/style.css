@@ -2290,3 +2290,11 @@ div#search-icon {
     width: 65px;
     border-radius: 50%;
 }
+
+.text{
+    margin-bottom: 10px;
+}
+
+.navigation-block .navigation-profile-item:not(:last-child){
+    margin-right: 30px;
+}
